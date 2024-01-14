@@ -2,16 +2,8 @@ import Pokedex from 'pokedex-promise-v2'
 
 function SearchBar() {
 
-    const P = new Pokedex()
-    let pokeList = []
-    P.getPokemonsList().then((res) => {
-        pokeList = res.results
-    })
-
     function searchHandler(e) {
-        pokeList.filter((pokemon) => {
-            
-        })
+
     }
 
     return (

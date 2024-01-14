@@ -10,3 +10,5 @@ Search bar:
 - Don't auto update search results
 - Have a search button
 (1/13/2024)
+
+Made quick wireframe of mobile layout on figma (1/14/24)
