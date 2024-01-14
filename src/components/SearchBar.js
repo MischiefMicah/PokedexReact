@@ -3,21 +3,15 @@ import Pokedex from 'pokedex-promise-v2'
 function SearchBar() {
 
     const P = new Pokedex()
-    const PList = P.getPokemonsList()
-    PList.then((res) => {
-        res.results.filter((pokemon) => {
-            if (pokemon.name.includes('bulb')) {
-                console.log(pokemon)
-            } else console.log('false')
-        })
+    let pokeList = []
+    P.getPokemonsList().then((res) => {
+        pokeList = res.results
     })
 
-    function searchHandler(x) {
-        // PList.then((res) => {
-        //     res.results.filter((pokemon) => {
-        //         return pokemon.name.includes(x)
-        //     })
-        // })
+    function searchHandler(e) {
+        pokeList.filter((pokemon) => {
+            
+        })
     }
 
     return (
