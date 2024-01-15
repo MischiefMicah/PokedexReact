@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 
 function PokeList() {
 
-    const [list, setList] = useState('')
+    const [list, setList] = useState(null)
     const [loading, setLoading] = useState(true)
-    const [err, setErr] = useState('')
+    const [err, setErr] = useState(null)
 
     useEffect(() => {
         async function fetchList() {
@@ -35,8 +35,9 @@ function PokeList() {
         <div>
             <div className="list-container">
                 {list.map((data, key) => {
-                    return (
-                        <div key={key}>{data.name}</div>
+                    let i = key
+                    if (i < 1025) return (
+                        <div key={key} id={key+1}>{data.name}</div>
                     )
                 })}
             </div>
