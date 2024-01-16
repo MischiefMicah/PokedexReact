@@ -37,7 +37,13 @@ function PokeList() {
                 {list.map((data, key) => {
                     let i = key
                     if (i < 1025) return (
-                        <div key={key} id={key+1}>{data.name}</div>
+                        <div key={key} id={key+1}>{
+                            // let name = data.name
+                            // if (name.includes('-')) {
+                            //     let splitted = name.split('-')
+                            //     splitted
+                            // }
+                            data.name}</div>
                     )
                 })}
             </div>
